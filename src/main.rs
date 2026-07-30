@@ -1,20 +1,31 @@
-//fn main() {
-//    println!("Hello, world!");
-//}
-
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
 use std::mem;
-fn veri() {
-    let a = 55;
-    print!("a: {}", a);
-}
 
 fn main() {
-    //veri();
-    let a = 55;
-    {
-        let a = 66;
-        print!("döngü içi a: {}\n", a);
-    }
-    print!("döngü dışı a: {}\n", a);
+    let a:u8 = 125; // u = unsigned, 0-255 8 bits 0 - 2^(N-1)
+    println!("a: {}", a);
+
+    let mut b:i8 = 0; // i = signed, -128 to 127 8 bits -2^(N-1) - 2^(N-1)
+    println!("önce b: {}", b);
+
+    b = 22;
+    println!("sonra b: {}", b);
+
+    let c = 123456789; // i32 default, -2,147,483,648 to 2,147,483,647 32 bits
+    println!("c: {} ve boyutu: {}", c, mem::size_of_val(&c));
+
+    let d:isize = -200; // isize default, -2,147,483,648 to 2,147,483,647 32 bits
+    println!("d: {} ve boyutu: {}", d, mem::size_of_val(&d));
+
+    let e:char = 'A'; // char, 4 bytes, 32 bits
+    println!("e: {} ve boyutu: {}", e, mem::size_of_val(&e));
+
+    let f:f32 = 3.14; // f32, 4 bytes, 32 bits
+    println!("f: {} ve boyutu: {}", f, mem::size_of_val(&f));
+
+
+    let g:bool = false; // bool, 1 byte, 8 bits
+    println!("g: {} ve boyutu: {}", g, mem::size_of_val(&g));
+
 }
