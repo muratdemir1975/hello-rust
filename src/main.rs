@@ -2,7 +2,7 @@
 #[allow(unused_variables)]
 use std::mem;
 
-fn main() {
+fn veri_tipleri(){
     let a:u8 = 125; // u = unsigned, 0-255 8 bits 0 - 2^(N-1)
     println!("a: {}", a);
 
@@ -24,8 +24,42 @@ fn main() {
     let f:f32 = 3.14; // f32, 4 bytes, 32 bits
     println!("f: {} ve boyutu: {}", f, mem::size_of_val(&f));
 
-
     let g:bool = false; // bool, 1 byte, 8 bits
     println!("g: {} ve boyutu: {}", g, mem::size_of_val(&g));
+}
 
+fn aritmetik_islemler(){
+    let mut a = 10+5+9;
+    println!("a: {}", a);
+
+    a = a - 5; // -- veya ++ Rust'da yoktur
+    println!("a: {}", a);
+
+    a += 10; // a = a + 10
+    println!("a: {}", a);
+
+    a *= 2; // a = a * 2
+    println!("a: {}", a);
+
+    a /= 3; // a = a / 3
+    println!("a: {}", a);
+
+    println!("kalan {} / {} = {} işleminden kalan", a, 3, a % 3);
+
+    let a_kupu = i32::pow(a, 3); // a^3
+    println!("a^3 = {}", a_kupu);
+
+    let b = 2.5;
+    let b_kupu = f64::powi(b, 3); // b^3
+    println!("b^3 = {}", b_kupu);
+
+    let b_ustu_pi = f64::powf(b, std::f64::consts::PI); // b^pi
+    println!("b^pi = {}", b_ustu_pi);
+    
+}   
+
+
+fn main() {
+    //veri_tipleri();
+    aritmetik_islemler();
 }
