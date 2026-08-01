@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 mod sh;
+mod kontrolakisi;
 
 use std::mem;
 const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
@@ -87,5 +88,9 @@ fn main() {
     //let veri2_kopya = unsafe { VERI2 };
     //println!("VERI2: {}", veri2_kopya);
 
-    sh::stack_and_heap();
+    //sh::stack_and_heap();
+
+    kontrolakisi::kontrol_akisi();
+    kontrolakisi::if_statements();
+
 }
