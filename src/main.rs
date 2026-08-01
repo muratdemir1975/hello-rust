@@ -1,6 +1,11 @@
-#[allow(dead_code)]
-#[allow(unused_variables)]
+#![allow(dead_code)]
+#![allow(unused_variables)]
+mod sh;
+
 use std::mem;
+const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
+static mut VERI2:i8 = 23; // bellekte bir adresi vardır, değiştirilebilir
+
 
 fn veri_tipleri(){
     let a:u8 = 125; // u = unsigned, 0-255 8 bits 0 - 2^(N-1)
@@ -55,11 +60,32 @@ fn aritmetik_islemler(){
 
     let b_ustu_pi = f64::powf(b, std::f64::consts::PI); // b^pi
     println!("b^pi = {}", b_ustu_pi);
-    
+
 }   
+
+fn bitwise_logic(){
+   let c = 1|2; // 0001 | 0010 = 0011 = 3
+   println!("1|2 = {}", c);
+
+   // mantıksal işlemlerinde <, >, <=, >=, ==, != operatörleri kullanılır
+   let pi_kucuk_mu = std::f64::consts::PI < 3.0; // false
+   println!("pi < 3.0 = {}", pi_kucuk_mu);
+
+}
+
 
 
 fn main() {
     //veri_tipleri();
-    aritmetik_islemler();
+    //aritmetik_islemler();
+    //bitwise_logic();
+    //println!("VERI: {}", VERI);
+
+    //unsafe {
+    //    VERI2 = 25;
+    //}
+    //let veri2_kopya = unsafe { VERI2 };
+    //println!("VERI2: {}", veri2_kopya);
+
+    sh::stack_and_heap();
 }
