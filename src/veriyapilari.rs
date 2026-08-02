@@ -56,7 +56,6 @@ pub fn toplaVeCarp(a:i32, b:i32) -> (i32, i32) {
     (a+b, a*b)
 }
 
-
 pub fn tuples() {
     let a=3;
     let b=4;
@@ -82,5 +81,22 @@ pub fn tuples() {
 }
 
 
+pub fn ne_kadar_elma_var(x:i32) -> &'static str {
+    match x {
+        0 => "Hiç elma yok",
+        1 | 2 => "Bir veya iki",
+        12 => "Bir düzüne",
+        z @ 20..30 => "20 - 30 arasinda",
+        x if x % 2 == 0 => "çift sayi",
+        _ => "biraz",
+    } 
+}
+
+
+pub fn match_string(s:&str) {
+    for x in 0..22 {
+        println!("{}: benim {} elmam var", x, ne_kadar_elma_var(x));
+    }
+}
 
 

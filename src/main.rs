@@ -117,6 +117,7 @@ fn main() {
     // veriyapilari::arrays();    
     // veriyapilari::matris();
     // veriyapilari::slices();
-    veriyapilari::tuples();
+    // veriyapilari::tuples();
+    veriyapilari::match_string("Merhaba");
 
 }
