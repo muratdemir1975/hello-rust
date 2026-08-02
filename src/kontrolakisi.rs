@@ -3,6 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_must_use)]
 
+use core::f32;
 use std::mem;
 use std::io::stdin;
 
@@ -184,5 +185,31 @@ pub fn enums (){
         Color::RGBColor(255, 0, 0) |
         Color::CMYKColor { cyan: 255, magenta: 0, yellow: 0, black: 0 } => println!("Color is Red (RGB)"),
         _ => println!("Color is something else")
+    }
+}
+
+
+pub union IntOrFloat {
+    pub i: i32,
+    pub f: f32
+}
+
+pub fn unions() {
+    let mut u = IntOrFloat { i: 42 };
+    unsafe {
+        println!("Union value as integer: {}", u.i);
+        u.f = 3.14;
+        println!("Union value as float: {}", u.f);
+    }
+}
+
+pub fn process_value(iof:IntOrFloat) {
+    unsafe {
+        match iof{
+            IntOrFloat {i:44} => {println!("Değer: 44 dür");}
+            IntOrFloat {f} => {println!("2 durum Değer: {f}");}
+            _ => {println!("Değer: bilinmiyor");}
+
+        }
     }
 }

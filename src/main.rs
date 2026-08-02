@@ -101,8 +101,17 @@ fn main() {
     //kontrolakisi::match_case_example();
     //kontrolakisi::example1();
     //kontrolakisi::structs();
-    kontrolakisi::enums();
+    //kontrolakisi::enums();
+    //kontrolakisi::unions();
 
+    let iof2 = kontrolakisi::IntOrFloat { f: 3.14 };
+    kontrolakisi::process_value(iof2);
+
+    let iof3 = kontrolakisi::IntOrFloat { i: 44 };
+    kontrolakisi::process_value(iof3);
+
+    let iof4 = kontrolakisi::IntOrFloat { i:1 };
+    kontrolakisi::process_value(iof4);
 
     
 }
