@@ -29,3 +29,14 @@ pub fn arrays() {
     println!("b dizisi {} byte boyutundadır", mem::size_of_val(&b));
 
 }
+
+
+pub fn matris() {
+    let mtx:[[i32; 3]; 2] = [[1, 2, 3], [4, 5, 6]];
+    println!("Matrisin boyutu: {} satır, {} sütun", mtx.len(), mtx[0].len());
+    for i in 0..mtx.len() {
+        for j in 0..mtx[i].len() {
+            println!("Matrisin: [{}] [{}] elemanı: {}", i+1, j+1, mtx[i][j]);
+        }
+    }
+}

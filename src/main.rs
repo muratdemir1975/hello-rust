@@ -114,7 +114,8 @@ fn main() {
     // let iof4 = kontrolakisi::IntOrFloat { i:1 };
     // kontrolakisi::process_value(iof4);
     // kontrolakisi::example2();
-    veriyapilari::arrays();    
+    // veriyapilari::arrays();    
+    veriyapilari::matris();
 
 
 }
