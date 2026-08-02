@@ -99,6 +99,7 @@ fn main() {
     //kontrolakisi::while_loop_with_continue();
     //kontrolakisi::for_loop_example();
     //kontrolakisi::match_case_example();
-    kontrolakisi::example1();
+    //kontrolakisi::example1();
+    kontrolakisi::structs();
 
 }

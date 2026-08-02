@@ -144,3 +144,24 @@ pub fn example1 (){
         }
     }
 }
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+struct line {
+    start: Point,
+    end: Point,
+}
+
+pub fn structs (){
+    let p = Point { x: 10, y: 20 };
+    println!("Point coordinates: ({}, {})", p.x, p.y);
+
+    let l = line {
+        start: Point { x: 0, y: 0 },
+        end: Point { x: 10, y: 10 },
+    };
+    println!("Line coordinates: ({}, {}) to ({}, {})", l.start.x, l.start.y, l.end.x, l.end.y);
+}
