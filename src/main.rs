@@ -100,6 +100,9 @@ fn main() {
     //kontrolakisi::for_loop_example();
     //kontrolakisi::match_case_example();
     //kontrolakisi::example1();
-    kontrolakisi::structs();
+    //kontrolakisi::structs();
+    kontrolakisi::enums();
 
+
+    
 }

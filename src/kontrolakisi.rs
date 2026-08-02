@@ -165,3 +165,24 @@ pub fn structs (){
     };
     println!("Line coordinates: ({}, {}) to ({}, {})", l.start.x, l.start.y, l.end.x, l.end.y);
 }
+
+
+enum Color {
+    Red,
+    Green,
+    Blue,
+    RGBColor(u8, u8, u8),
+    CMYKColor { cyan: u8, magenta: u8, yellow: u8, black: u8 }
+}
+
+pub fn enums (){
+    let c = Color::RGBColor(255, 0, 0);
+    match c {
+        Color::Red => println!("Color is Red"),
+        Color::Green => println!("Color is Green"),
+        Color::Blue => println!("Color is Blue"),
+        Color::RGBColor(255, 0, 0) |
+        Color::CMYKColor { cyan: 255, magenta: 0, yellow: 0, black: 0 } => println!("Color is Red (RGB)"),
+        _ => println!("Color is something else")
+    }
+}
