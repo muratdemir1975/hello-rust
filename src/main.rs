@@ -2,6 +2,7 @@
 #![allow(unused_variables)]
 mod sh;
 mod kontrolakisi;
+mod veriyapilari;
 
 use std::mem;
 
@@ -112,7 +113,8 @@ fn main() {
 
     // let iof4 = kontrolakisi::IntOrFloat { i:1 };
     // kontrolakisi::process_value(iof4);
+    // kontrolakisi::example2();
+    veriyapilari::arrays();    
 
-    kontrolakisi::example2();
-    
+
 }
