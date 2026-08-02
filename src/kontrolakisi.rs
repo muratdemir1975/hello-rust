@@ -1,4 +1,10 @@
 #![allow(dead_code)]
+#![allow(unused_variables)]
+#![allow(unused_imports)]
+#![allow(unused_must_use)]
+
+use std::mem;
+use std::io::stdin;
 
 pub fn kontrol_akisi() {
     let x = 5;
@@ -90,4 +96,51 @@ pub fn match_case_example() {
         _ => "Bilinmeyen ülke",
     };
     println!("Ülke adı: {}", ulke_adi);
+}
+
+enum State {
+    Locked,
+    Unlocked,
+    Failed
+}
+
+pub fn example1 (){
+    let code = String::from("1234");
+    let mut state = State::Locked;
+
+    let mut entry = String::new();
+
+    loop {
+        match state {
+            State::Locked => {
+                let mut input = String::new();
+                match stdin().read_line(&mut input) {
+                    Ok(_) => {
+                        entry.push_str(&input.trim_end());
+                    }
+                    Err(_) => {
+                        println!("Giriş okunamadı.");
+                        continue;
+                    }
+                }
+                if entry == code {
+                    state = State::Unlocked;
+                    continue;
+                }
+                if !code.starts_with(&entry) {
+                    state = State::Failed;
+                }
+            }
+            State::Failed => {
+                println!("Hatalı giriş! Tekrar deneyin.");
+                entry.clear();
+                state = State::Locked;
+                continue;
+            }
+            State::Unlocked => {
+                println!("Giriş başarılı! Sistem açıldı.");
+                break;
+            }
+        }
+    }
 }
