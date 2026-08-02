@@ -90,7 +90,12 @@ fn main() {
 
     //sh::stack_and_heap();
 
-    kontrolakisi::kontrol_akisi();
-    kontrolakisi::if_statements();
+    //kontrolakisi::kontrol_akisi();
+    //kontrolakisi::if_statements();
+
+    //kontrolakisi::while_loop_example();
+    //kontrolakisi::while_loop_with_break();
+    //kontrolakisi::while_loop_with_continue();
+    kontrolakisi::for_loop_example();
 
 }
