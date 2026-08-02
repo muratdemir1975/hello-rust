@@ -213,3 +213,24 @@ pub fn process_value(iof:IntOrFloat) {
         }
     }
 }
+
+
+pub fn example2() {
+    let x = 2.0;
+    let y = 1.0;
+
+    let result = if y != 0.0 { Some(x/y) } else {None};
+
+    match result {
+        Some(value) => println!("{} / {} Sonuç: {}",x,y, value),
+        None => println!("Hata: Sıfıra bölme hatası!"),
+    }
+
+    if let Some(value) = result {
+        println!("{} / {} Sonuç: {}",x,y, value);
+    } else {
+        println!("Hata: Sıfıra bölme hatası!");
+    }
+}
+
+
