@@ -40,3 +40,16 @@ pub fn matris() {
         }
     }
 }
+
+pub fn use_slice(slice:&mut [i32]) {
+    println!("Slice boyutu: {}", slice.len());
+    for i in 0..slice.len() {
+        println!("Slice elemanı {}: {}", i+1, slice[i]);
+    }
+}
+
+pub fn slices() {
+    let mut data = [1, 2, 3, 4, 5];
+    use_slice(&mut data[1..4]); // 2, 3, 4
+}
+

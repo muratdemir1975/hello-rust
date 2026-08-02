@@ -115,7 +115,8 @@ fn main() {
     // kontrolakisi::process_value(iof4);
     // kontrolakisi::example2();
     // veriyapilari::arrays();    
-    veriyapilari::matris();
+    // veriyapilari::matris();
+    veriyapilari::slices();
 
 
 }
