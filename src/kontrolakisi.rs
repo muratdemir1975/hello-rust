@@ -79,6 +79,15 @@ pub fn for_loop_example() {
         println!("Meyve {}: {}", index, meyve);
     }
 
-    
 }
 
+pub fn match_case_example() {
+    let ukle_kodu = 90;
+    let ulke_adi = match ukle_kodu {
+        1 => "ABD",
+        44 => "İngiltere",
+        90 => "Türkiye",
+        _ => "Bilinmeyen ülke",
+    };
+    println!("Ülke adı: {}", ulke_adi);
+}

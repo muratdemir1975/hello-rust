@@ -96,6 +96,7 @@ fn main() {
     //kontrolakisi::while_loop_example();
     //kontrolakisi::while_loop_with_break();
     //kontrolakisi::while_loop_with_continue();
-    kontrolakisi::for_loop_example();
+    //kontrolakisi::for_loop_example();
+    kontrolakisi::match_case_example();
 
 }
