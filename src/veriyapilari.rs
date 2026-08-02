@@ -80,7 +80,6 @@ pub fn tuples() {
 
 }
 
-
 pub fn ne_kadar_elma_var(x:i32) -> &'static str {
     match x {
         0 => "Hiç elma yok",
@@ -92,11 +91,21 @@ pub fn ne_kadar_elma_var(x:i32) -> &'static str {
     } 
 }
 
-
 pub fn match_string(s:&str) {
     for x in 0..22 {
         println!("{}: benim {} elmam var", x, ne_kadar_elma_var(x));
     }
 }
 
+#[derive(Debug)]
+pub struct Point1<T,V> {
+    pub x: T,
+    pub y: V,
+}
+
+#[derive(Debug)]
+pub struct Line1<T,V> {
+    pub start: Point1<T,V>,
+    pub end: Point1<T,V>
+}
 

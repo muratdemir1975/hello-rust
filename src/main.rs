@@ -5,6 +5,7 @@ mod kontrolakisi;
 mod veriyapilari;
 
 use std::mem;
+use veriyapilari::{Point1, Line1};
 
 const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
 static mut VERI2:i8 = 23; // bellekte bir adresi vardır, değiştirilebilir
@@ -118,6 +119,15 @@ fn main() {
     // veriyapilari::matris();
     // veriyapilari::slices();
     // veriyapilari::tuples();
-    veriyapilari::match_string("Merhaba");
+    // veriyapilari::match_string("Merhaba");
+
+    let a = Point1 { x: 3, y: 4 };
+    let b = Point1 { x: 5.0, y: 6.0 };
+    let c = Point1 { x: 7, y: 8 };
+    let cizgi1 = Line1 { start: Point1 { x: 1, y: 2 }, end: Point1 { x: 3, y: 4 } };
+    println!("Point a: {:?}", a);
+    println!("Point b: {:?}", b);
+    println!("Point c: {:?}", c);
+    println!("Line cizgi1: {:?}", cizgi1);
 
 }
