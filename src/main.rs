@@ -116,7 +116,7 @@ fn main() {
     // kontrolakisi::example2();
     // veriyapilari::arrays();    
     // veriyapilari::matris();
-    veriyapilari::slices();
-
+    // veriyapilari::slices();
+    veriyapilari::tuples();
 
 }

@@ -30,7 +30,6 @@ pub fn arrays() {
 
 }
 
-
 pub fn matris() {
     let mtx:[[i32; 3]; 2] = [[1, 2, 3], [4, 5, 6]];
     println!("Matrisin boyutu: {} satır, {} sütun", mtx.len(), mtx[0].len());
@@ -52,4 +51,36 @@ pub fn slices() {
     let mut data = [1, 2, 3, 4, 5];
     use_slice(&mut data[1..4]); // 2, 3, 4
 }
+
+pub fn toplaVeCarp(a:i32, b:i32) -> (i32, i32) {
+    (a+b, a*b)
+}
+
+
+pub fn tuples() {
+    let a=3;
+    let b=4;
+    let sonuclar = toplaVeCarp(a, b);
+    println!("Sonuçlar: {:?} ", sonuclar);
+    println!("Toplam: {0} + {1} = {2} ve Çarpım: {0} * {1} = {3}", a, b, sonuclar.0, sonuclar.1);
+    
+    let (toplam, carpım) = sonuclar;
+    println!("Toplam: {} ve Çarpım: {}", toplam, carpım);
+
+    let sonuclar2 = toplaVeCarp(4, 8);
+    let combine = (sonuclar, sonuclar2);
+    println!("Combine: {:?}", combine);
+
+    println!("sonuncu eleman: {}", combine.1.1);
+
+    let elemanlar = (true, 3.14, 'A', "Merhaba");
+    println!("Elemanlar: {:?}", elemanlar);
+
+    let eleman = (12,);
+    println!("Eleman: {:?}", eleman);
+
+}
+
+
+
 
