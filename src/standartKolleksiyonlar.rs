@@ -44,3 +44,24 @@ pub fn vektors() {
     }
 
 }
+
+
+pub fn hashmaps() {
+    use std::collections::HashMap;
+
+    let mut sekiller = HashMap::new();
+    let ucgen = String::from("ucgen");
+    let kare = String::from("kare");
+
+    sekiller.insert(ucgen, 3);
+    sekiller.insert(kare, 4);
+
+    println!("sekiller: {:?}", sekiller);
+
+    for (key, value) in &sekiller {
+        println!("{}: {}", key, value);
+    }
+
+    sekiller.entry(String::from("daire")).or_insert(1);
+    println!("sekiller: {:?}", sekiller);
+}
