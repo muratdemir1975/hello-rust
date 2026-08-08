@@ -3,7 +3,7 @@
 mod sh;
 mod kontrolakisi;
 mod veriyapilari;
-mod vektors;
+mod standartKolleksiyonlar;
 
 use std::mem;
 use veriyapilari::{Point1, Line1};
@@ -121,7 +121,7 @@ fn main() {
     // veriyapilari::slices();
     // veriyapilari::tuples();
     // veriyapilari::match_string("Merhaba");
-    vektors::vektors();
+    standartKolleksiyonlar::vektors();
 
 
 
