@@ -109,5 +109,36 @@ pub fn hash_sets() {
     println!("{:?} ∩ {:?} = {:?}", _1_10, _2_8, _1_10.intersection(&_2_8).collect::<HashSet<_>>());
     println!("{:?} - {:?} = {:?}", _1_10, _2_8, _1_10.difference(&_2_8).collect::<HashSet<_>>());
 
-
 }
+
+
+pub fn iters() {
+    let mut v = vec![1, 2, 3, 4, 5];
+
+    for i in &v {
+        println!("i: {}", i);
+    }
+
+    for i in v.iter() {
+        println!("i: {}", i);
+    }
+
+    for i in v.iter().rev() {
+        println!("i: {}", i);
+    }
+
+    for i in &mut v {
+        *i += 10;
+    }
+
+    for i in &v {
+        println!("i: {}", i);
+    }
+
+    let mut v2 = vec![1, 2, 3, 4, 5];
+    v2.extend(v);
+    println!("v2: {:?}", v2);
+
+
+
+}   
