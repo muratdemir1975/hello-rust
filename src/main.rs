@@ -122,7 +122,8 @@ fn main() {
     // veriyapilari::tuples();
     // veriyapilari::match_string("Merhaba");
     //  standartKolleksiyonlar::vektors();
-    standartKolleksiyonlar::hashmaps();
+    // standartKolleksiyonlar::hashmaps();
+    standartKolleksiyonlar::hash_sets();
 
 
 
