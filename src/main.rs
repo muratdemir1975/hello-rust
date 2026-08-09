@@ -5,6 +5,7 @@ mod kontrolakisi;
 mod veriyapilari;
 mod standartKolleksiyonlar;
 mod karakterlerVeString;
+mod sayi_tahmin_oyunu;
 
 use std::mem;
 use veriyapilari::{Point1, Line1};
@@ -127,9 +128,10 @@ fn main() {
     // standartKolleksiyonlar::hash_sets();
     // standartKolleksiyonlar::iters();
     // karakterlerVeString::Strings();
-    karakterlerVeString::Strings2();
+    // karakterlerVeString::Strings2();
+    sayi_tahmin_oyunu::sayi_tahmin_oyunu();
 
-    
+
     let a = Point1 { x: 3, y: 4 };
     let b = Point1 { x: 5.0, y: 6.0 };
     let c = Point1 { x: 7, y: 8 };
