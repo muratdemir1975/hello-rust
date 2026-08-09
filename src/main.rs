@@ -132,7 +132,8 @@ fn main() {
     // karakterlerVeString::Strings2();
     // sayi_tahmin_oyunu::sayi_tahmin_oyunu();
     // fonksiyonlar::fonksiyonlar();
-    fonksiyonlar::metodlar();
+    // fonksiyonlar::metodlar();
+    fonksiyonlar::closures();
 
     let a = Point1 { x: 3, y: 4 };
     let b = Point1 { x: 5.0, y: 6.0 };

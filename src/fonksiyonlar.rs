@@ -52,3 +52,48 @@ pub fn metodlar() {
     let myLine=Line{start:p, end:p2};
     println!("Mesafe: {}", myLine.len());
 }
+
+pub fn merhaba_de() {
+    println!("selamlar");
+}
+
+pub fn closures () {
+    //merhaba_de();
+    let selam=merhaba_de;
+    selam();
+
+    let arti_bir = |x:i32|-> i32{x+1};
+    let a = 8;
+    println!("{} + 1 = {}", a, arti_bir(a));
+
+    let mut iki = 2;
+    {
+        let arti_iki = |x| {
+            let mut z = x;
+            z+=iki;
+            z
+        };
+
+        println!("{} + 2 = {}",22, arti_iki(22));
+        iki = 8;
+    }
+
+    let odunc_al = &iki;
+    println!("{}", odunc_al);
+
+/*  
+    let arti_uc = |x:&mut i32| *x+=3;
+    let mut k = 14;
+    arti_uc(&mut k);
+    println!("k={}",k)
+ */
+
+    let arti_uc = |mut x: i32| x+=3;
+    let mut k = 14;
+    arti_uc(k);
+    println!("k={}",k)
+
+
+
+}
+
