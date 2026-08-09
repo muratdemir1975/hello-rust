@@ -6,6 +6,7 @@ mod veriyapilari;
 mod standartKolleksiyonlar;
 mod karakterlerVeString;
 mod sayi_tahmin_oyunu;
+mod fonksiyonlar;
 
 use std::mem;
 use veriyapilari::{Point1, Line1};
@@ -129,7 +130,8 @@ fn main() {
     // standartKolleksiyonlar::iters();
     // karakterlerVeString::Strings();
     // karakterlerVeString::Strings2();
-    sayi_tahmin_oyunu::sayi_tahmin_oyunu();
+    // sayi_tahmin_oyunu::sayi_tahmin_oyunu();
+    fonksiyonlar::fonksiyonlar();
 
 
     let a = Point1 { x: 3, y: 4 };
