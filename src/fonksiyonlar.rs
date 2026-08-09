@@ -93,6 +93,40 @@ pub fn closures () {
     arti_uc(k);
     println!("k={}",k)
 
+}
+
+pub fn is_even (x:u32)->bool {
+    x%2==0
+}
+
+pub fn buyuk_mu(limit: u32)->impl Fn(u32)->bool {
+    move |y| y > limit
+}
+
+pub fn fonksiyonlar_iki () {
+    let limit = 500;
+    let mut sum = 0;
+
+    //let limite_kadar = |y| y>limit;
+    let limite_kadar = buyuk_mu(limit);
+
+    for i in 0.. {
+        let deger = i*i;
+        if limite_kadar(deger){
+            break;
+        }else if is_even(deger) {
+            sum+=deger
+        }
+        println!("döngünün toplamı = {}", sum);
+    }
+
+    let toplam = (0..)
+        .map(|x| x*x)
+        .take_while(|&x| x<limit)
+        .filter(|x| is_even(*x))
+        .fold(0,|sum,x| sum+x);
+
+    println!("fonksiyonlar ileri yöntemle toplamı: {}", toplam);
 
 
 }
