@@ -126,9 +126,10 @@ fn main() {
     // standartKolleksiyonlar::hashmaps();
     // standartKolleksiyonlar::hash_sets();
     // standartKolleksiyonlar::iters();
-    karakterlerVeString::Strings();
+    // karakterlerVeString::Strings();
+    karakterlerVeString::Strings2();
 
-
+    
     let a = Point1 { x: 3, y: 4 };
     let b = Point1 { x: 5.0, y: 6.0 };
     let c = Point1 { x: 7, y: 8 };

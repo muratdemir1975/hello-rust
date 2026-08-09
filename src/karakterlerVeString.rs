@@ -64,5 +64,18 @@ pub fn Strings () {
     // String remove
     println!("'{0}' çıkan karakter. Son durum {1}",metin.remove(4), metin);
 
+}
+
+pub fn Strings2 () {
+    let isim = "Murat";
+    let selamlama = format!("merhaba ben {},\n iyi günler",isim);
+    println!("{}", selamlama);
+
+    let selam = "selam";
+    let rust = "Rust";
+    let selam_rust = format!("{}, {}",selam, rust);
+    println!("{}", selam_rust);
+
 
 }
+
