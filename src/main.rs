@@ -4,6 +4,7 @@ mod sh;
 mod kontrolakisi;
 mod veriyapilari;
 mod standartKolleksiyonlar;
+mod karakterlerVeString;
 
 use std::mem;
 use veriyapilari::{Point1, Line1};
@@ -124,8 +125,8 @@ fn main() {
     // standartKolleksiyonlar::vektors();
     // standartKolleksiyonlar::hashmaps();
     // standartKolleksiyonlar::hash_sets();
-    standartKolleksiyonlar::iters();
-
+    // standartKolleksiyonlar::iters();
+    karakterlerVeString::Strings();
 
 
     let a = Point1 { x: 3, y: 4 };
