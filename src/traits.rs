@@ -106,7 +106,7 @@ where T:Shape + Debug{
     println!("Alan: {}",shape.area())
 }
 
-struct Person {
+pub struct Person {
     name:String
 }
 

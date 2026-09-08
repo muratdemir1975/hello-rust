@@ -11,6 +11,7 @@ mod traits;
 
 use std::mem;
 use veriyapilari::{Point1, Line1};
+use traits::Person;
 
 const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
 static mut VERI2:i8 = 23; // bellekte bir adresi vardır, değiştirilebilir
@@ -154,6 +155,7 @@ fn main() {
     // let s = traits::Square {side: 4.0};
     // traits::bilgi_ver(s);
 
-    let enes:Person=Person::new(name:"Enes");
+    let enes: Person = Person::new("Enes");
+    println!("Kişi adı: {}", enes.name);
 
 }
