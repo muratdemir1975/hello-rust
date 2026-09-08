@@ -107,11 +107,17 @@ where T:Shape + Debug{
 }
 
 pub struct Person {
-    name:String
+    pub name: String
 }
 
+// impl Person {
+//     pub fn new(name:&str)->Person{
+//         Person { name:name.to_string() }
+//     }
+
 impl Person {
-    pub fn new(name:&str)->Person{
-        Person { name:name.to_string() }
-    }
+    pub fn new<S: Into<String>>(name:S)->Person{
+        Person { name:name.into() }
+}
+
 }

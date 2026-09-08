@@ -155,7 +155,12 @@ fn main() {
     // let s = traits::Square {side: 4.0};
     // traits::bilgi_ver(s);
 
+
     let enes: Person = Person::new("Enes");
+    let name="Ahmet".to_string();
+    let ahmet: Person = Person::new(&name);
+
     println!("Kişi adı: {}", enes.name);
+    println!("Kişi adı: {}", ahmet.name);
 
 }
