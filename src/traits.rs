@@ -119,5 +119,27 @@ impl Person {
     pub fn new<S: Into<String>>(name:S)->Person{
         Person { name:name.into() }
 }
+}
 
+pub struct Creature {
+    name: String
+}
+
+impl Creature {
+    pub fn new<S: Into<String>>(name:S)->Creature{
+        println!("{} oyuna basladı", name);
+        Creature { name:name.into() }
+    }
+}
+
+impl Drop for Creature {
+    pub fn drop(&mut self) {
+        println!("{} oyundan ayrıldı", self.name);
+    }
+}
+
+pub fn drop_() {
+    let c1 = Creature::new("Murat");
+    let c2 = Creature::new("Ahmet");
+    println!("{} ve {} oyunda", c1.name, c2.name);
 }
