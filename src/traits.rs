@@ -126,14 +126,14 @@ pub struct Creature {
 }
 
 impl Creature {
-    pub fn new<S: Into<String>>(name:S)->Creature{
+    fn new<S: Into<String>>(name:S)->Creature{
         println!("{} oyuna basladı", name);
         Creature { name:name.into() }
     }
 }
 
 impl Drop for Creature {
-    pub fn drop(&mut self) {
+    fn drop(&mut self) {
         println!("{} oyundan ayrıldı", self.name);
     }
 }
