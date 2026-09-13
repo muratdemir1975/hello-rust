@@ -1,5 +1,7 @@
+use std::ops::{Add, Neg};
 use std::result;
 use std::fmt::Debug;
+use std::ops::{Add, Sub, Mul, Div, AddAssign, SubAssign, MulAssign, DivAssign};
 
 trait Animal {
     fn create(name:&'static str)->Self;
@@ -144,4 +146,58 @@ pub fn drop_() {
     let c1 = Creature::new("Murat");
     let c2 = Creature::new("Ahmet");
     println!("{} ve {} oyunda", c1.name, c2.name);
+}
+
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Complex<T> {
+    re:T,
+    im:T
+}
+
+impl<T> Complex<T> {
+    fn new(re:T,im:T)->Complex<T>{
+        Complex::<T>{re,im}
+    }
+}
+
+impl<T> Add for Complex<T>
+where T:Add<Output=T>
+{
+    type Output=Complex<T>;
+    fn add(self, rhs:Self)->Self::Output{
+        Complex::<T>{
+            re:self.re + rhs.re,
+            im:self.im + rhs.im
+        }
+    }
+}
+
+impl<T> AddAssign for Complex<T>
+where T:AddAssign<T>
+{
+    fn add_assign(&mut self, rhs:Self){
+        self.re += rhs.re;
+        self.im += rhs.im;
+    }
+}
+
+impl<T> Neg for Complex<T>
+where T:Neg<Output=T>
+{
+    type Output=Complex<T>;
+    fn neg(self)->Self::Output{
+        Complex::<T>{
+            re:-self.re,
+            im:-self.im
+        }
+    }
+}
+
+impl<T> PartialEq for Complex<T>
+where T:PartialEq
+{
+    fn eq(&self, other:&Self)->bool{
+        self.re == other.re && self.im == other.im
+    }
 }

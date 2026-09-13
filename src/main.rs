@@ -14,6 +14,8 @@ use veriyapilari::{Point1, Line1};
 use traits::Person;
 use traits::drop_;
 
+use crate::traits::Complex;
+
 const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
 static mut VERI2:i8 = 23; // bellekte bir adresi vardır, değiştirilebilir
 
@@ -164,7 +166,35 @@ fn main() {
     // println!("Kişi adı: {}", enes.name);
     // println!("Kişi adı: {}", ahmet.name);
 
-    drop_();
+    // drop_();
 
 
+    let mut a=Complex::new(1,2);
+    let mut b=Complex::new(3,4);
+    println!("a: {:?}", a);
+    println!("b: {:?}", b);
+    let c=a+b;
+    // println!("c: {:?}", c);
+    // let d=a-b;
+    // println!("d: {:?}", d);
+    // let e=a*b;
+    // println!("e: {:?}", e);
+    // let f=a/b;
+    // println!("f: {:?}", f);
+    // let g=-a;
+    // println!("g: {:?}", g);
+    // let h=a==b;
+    // println!("h: {:?}", h);
+    // let i=a!=b;
+    // println!("i: {:?}", i);
+    // let j=a<b;
+    // println!("j: {:?}", j);
+    // let k=a>b;
+    // println!("k: {:?}", k);
+    // let l=a<=b;
+    // println!("l: {:?}", l);
+    // let m=a>=b;
+    // println!("m: {:?}", m);
+
+    
 }
