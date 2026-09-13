@@ -125,10 +125,12 @@ pub struct Creature {
     name: String
 }
 
+
 impl Creature {
-    fn new<S: Into<String>>(name:S)->Creature{
+    fn new<S: Into<String>>(name: S) -> Creature {
+        let name = name.into();
         println!("{} oyuna basladı", name);
-        Creature { name:name.into() }
+        Creature { name }
     }
 }
 
