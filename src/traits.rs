@@ -172,6 +172,19 @@ where T:Add<Output=T>
     }
 }
 
+
+impl<T> Sub for Complex<T>
+where T: Sub<Output = T>
+{
+    type Output = Complex<T>;
+    fn sub(self, rhs: Self) -> Self::Output {
+        Complex::<T> {
+            re: self.re - rhs.re,
+            im: self.im - rhs.im
+        }
+    }
+}
+
 impl<T> AddAssign for Complex<T>
 where T:AddAssign<T>
 {

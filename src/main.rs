@@ -177,24 +177,24 @@ fn main() {
     println!("c: {:?}", c);
     let d=a-b;
     println!("d: {:?}", d);
-    // let e=a*b;
-    // println!("e: {:?}", e);
-    // let f=a/b;
-    // println!("f: {:?}", f);
-    // let g=-a;
-    // println!("g: {:?}", g);
-    // let h=a==b;
-    // println!("h: {:?}", h);
-    // let i=a!=b;
-    // println!("i: {:?}", i);
-    // let j=a<b;
-    // println!("j: {:?}", j);
-    // let k=a>b;
-    // println!("k: {:?}", k);
-    // let l=a<=b;
-    // println!("l: {:?}", l);
-    // let m=a>=b;
-    // println!("m: {:?}", m);
+    let e=a*b;
+    println!("e: {:?}", e);
+    let f=a/b;
+    println!("f: {:?}", f);
+    let g=-a;
+    println!("g: {:?}", g);
+    let h=a==b;
+    println!("h: {:?}", h);
+    let i=a!=b;
+    println!("i: {:?}", i);
+    let j=a<b;
+    println!("j: {:?}", j);
+    let k=a>b;
+    println!("k: {:?}", k);
+    let l=a<=b;
+    println!("l: {:?}", l);
+    let m=a>=b;
+    println!("m: {:?}", m);
 
     
 }
