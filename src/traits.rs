@@ -185,6 +185,28 @@ where T: Sub<Output = T>
     }
 }
 
+impl<T> Mul for Complex<T>
+where T: Mul<Output = T> + Sub<Output = T> + Add<Output = T> + Copy
+{
+    type Output = Complex<T>;
+    fn mul(self, rhs: Self) -> Self::Output {
+        Complex::<T> {
+            re: self.re * rhs.re - self.im * rhs.im,
+            im: self.re * rhs.im + self.im * rhs.re
+        }
+    }
+}
+
+impl<T> PartialOrd for Complex<T>
+where T: PartialOrd + Mul<Output = T> + Add<Output = T> + Copy
+{
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        let self_mag = self.re * self.re + self.im * self.im;
+        let other_mag = other.re * other.re + other.im * other.im;
+        self_mag.partial_cmp(&other_mag)
+    }
+}
+
 impl<T> AddAssign for Complex<T>
 where T:AddAssign<T>
 {
