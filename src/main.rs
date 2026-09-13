@@ -174,9 +174,9 @@ fn main() {
     println!("a: {:?}", a);
     println!("b: {:?}", b);
     let c=a+b;
-    // println!("c: {:?}", c);
-    // let d=a-b;
-    // println!("d: {:?}", d);
+    println!("c: {:?}", c);
+    let d=a-b;
+    println!("d: {:?}", d);
     // let e=a*b;
     // println!("e: {:?}", e);
     // let f=a/b;

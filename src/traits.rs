@@ -1,7 +1,6 @@
-use std::ops::{Add, Neg};
 use std::result;
 use std::fmt::Debug;
-use std::ops::{Add, Sub, Mul, Div, AddAssign, SubAssign, MulAssign, DivAssign};
+use std::ops::{Add, Neg, Sub, Mul, Div, AddAssign, SubAssign, MulAssign, DivAssign};
 
 trait Animal {
     fn create(name:&'static str)->Self;
@@ -149,14 +148,14 @@ pub fn drop_() {
 }
 
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Eq)]
 pub struct Complex<T> {
     re:T,
     im:T
 }
 
 impl<T> Complex<T> {
-    fn new(re:T,im:T)->Complex<T>{
+    pub fn new(re:T,im:T)->Complex<T>{
         Complex::<T>{re,im}
     }
 }
