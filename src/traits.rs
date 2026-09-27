@@ -3,8 +3,8 @@ use std::fmt::Debug;
 use std::ops::{Add, Neg, Sub, Mul, Div, AddAssign, SubAssign, MulAssign, DivAssign};
 
 trait Animal {
-    fn create(name:&'static str)->Self;
-    fn name(&self)->&'static str;
+    fn create(name: &'static str) -> Self where Self: Sized;
+    fn name(&self) -> &'static str;
     fn talk(&self) {
         println!("{} cannot talk", self.name());
     }
