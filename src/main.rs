@@ -169,32 +169,37 @@ fn main() {
     // drop_();
 
 
-    let mut a=Complex::new(1,2);
-    let mut b=Complex::new(3,4);
-    println!("a: {:?}", a);
-    println!("b: {:?}", b);
-    let c=a+b;
-    println!("c: {:?}", c);
-    let d=a-b;
-    println!("d: {:?}", d);
-    let e=a*b;
-    println!("e: {:?}", e);
-    let f=a/b;
-    println!("f: {:?}", f);
-    let g=-a;
-    println!("g: {:?}", g);
-    let h=a==b;
-    println!("h: {:?}", h);
-    let i=a!=b;
-    println!("i: {:?}", i);
-    let j=a<b;
-    println!("j: {:?}", j);
-    let k=a>b;
-    println!("k: {:?}", k);
-    let l=a<=b;
-    println!("l: {:?}", l);
-    let m=a>=b;
-    println!("m: {:?}", m);
+    // let mut a=Complex::new(1,2);
+    // let mut b=Complex::new(3,4);
+    // println!("a: {:?}", a);
+    // println!("b: {:?}", b);
+    // let c=a+b;
+    // println!("c: {:?}", c);
+    // let d=a-b;
+    // println!("d: {:?}", d);
+    // let e=a*b;
+    // println!("e: {:?}", e);
+    // let f=a/b;
+    // println!("f: {:?}", f);
+    // let g=-a;
+    // println!("g: {:?}", g);
+    // let h=a==b;
+    // println!("h: {:?}", h);
+    // let i=a!=b;
+    // println!("i: {:?}", i);
+    // let j=a<b;
+    // println!("j: {:?}", j);
+    // let k=a>b;
+    // println!("k: {:?}", k);
+    // let l=a<=b;
+    // println!("l: {:?}", l);
+    // let m=a>=b;
+    // println!("m: {:?}", m);
 
-    
+    let a=123;
+    let b="Merhaba".to_string();
+
+    println!("a: {}",a.format());
+    println!("b: {}",b.format());
+
 }

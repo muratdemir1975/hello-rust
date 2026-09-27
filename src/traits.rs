@@ -235,3 +235,33 @@ where T:PartialEq
         self.re == other.re && self.im == other.im
     }
 }
+
+impl<T> Div for Complex<T>
+where T: Mul<Output = T> + Add<Output = T> + Sub<Output = T> + Div<Output = T> + Copy
+{
+    type Output = Complex<T>;
+    fn div(self, rhs: Self) -> Self::Output {
+        let denom = rhs.re * rhs.re + rhs.im * rhs.im;
+        Complex::<T> {
+            re: (self.re * rhs.re + self.im * rhs.im) / denom,
+            im: (self.im * rhs.re - self.re * rhs.im) / denom
+        }
+    }
+}
+
+trait Printable {
+    pub fn format(&self) -> String;
+}
+
+impl Printable for i32 {
+    pub fn format(&self) -> String {
+        format!("i32: {}", self)
+    }
+}
+
+impl Printable for String {
+    pub fn format(&self) -> String {
+        format!("String: {}", self)
+    }
+}
+
