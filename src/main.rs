@@ -15,6 +15,8 @@ use traits::Person;
 use traits::drop_;
 
 use crate::traits::Complex;
+use traits::Printable;
+
 
 const VERI:i8 = 23; // bellirli bir adresi yoktur, sabit bir değer tutar, değiştirilemez
 static mut VERI2:i8 = 23; // bellekte bir adresi vardır, değiştirilebilir

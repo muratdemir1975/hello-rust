@@ -250,18 +250,17 @@ where T: Mul<Output = T> + Add<Output = T> + Sub<Output = T> + Div<Output = T> +
 }
 
 trait Printable {
-    pub fn format(&self) -> String;
+    fn format(&self) -> String;
 }
 
 impl Printable for i32 {
-    pub fn format(&self) -> String {
+    fn format(&self) -> String {
         format!("i32: {}", self)
     }
 }
 
 impl Printable for String {
-    pub fn format(&self) -> String {
+    fn format(&self) -> String {
         format!("String: {}", self)
     }
 }
-
