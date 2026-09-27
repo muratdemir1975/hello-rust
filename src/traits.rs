@@ -265,6 +265,37 @@ impl Printable for String {
     }
 }
 
-fn print_item<T: Printable>(item:T) {
+// Static dispatch version
+pub fn print_item<T: Printable>(item:T) {
     println!("{}", item.format());
+}
+// Dynamic dispatch version
+pub fn print_item2(item: &dyn Printable) {
+    println!("{}", item.format());
+}
+
+pub enum Yaratik {
+    Human(Human),
+    Cat(Cat),
+}
+
+pub fn traits1() {
+    let mut yaratiklar: Vec<Yaratik> = Vec::new();
+    yaratiklar.push(Yaratik::Human(Human::create("Murat")));
+    yaratiklar.push(Yaratik::Cat(Cat::create("Toprak")));
+
+    for yaratik in yaratiklar {
+        match yaratik {
+            Yaratik::Human(h) => h.talk(),
+            Yaratik::Cat(c) => c.talk(),
+        }
+    }
+
+    let mut canlilar: Vec<Box<dyn Animal>> = Vec::new();
+    canlilar.push(Box::new(Human::create("Ahmet")));
+    canlilar.push(Box::new(Cat::create("Pamuk")));
+    
+    for canli in canlilar.iter() {
+        canli.talk();
+    }
 }
