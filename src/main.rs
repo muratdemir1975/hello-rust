@@ -203,5 +203,8 @@ fn main() {
 
     println!("a: {}",a.format());
     println!("b: {}",b.format());
+    
+    print_item(a);
+    print_item(b);
 
 }

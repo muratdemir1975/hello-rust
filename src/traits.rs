@@ -249,7 +249,7 @@ where T: Mul<Output = T> + Add<Output = T> + Sub<Output = T> + Div<Output = T> +
     }
 }
 
-trait Printable {
+pub trait Printable {
     fn format(&self) -> String;
 }
 
@@ -263,4 +263,8 @@ impl Printable for String {
     fn format(&self) -> String {
         format!("String: {}", self)
     }
+}
+
+fn print_item<T: Printable>(item:T) {
+    println!("{}", item.format());
 }
